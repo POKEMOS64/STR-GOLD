@@ -30,7 +30,8 @@ $('.owl-carousel.index-slide,.owl-carousel.slider-widget').owlCarousel({
     loop:false,
     margin:0,
     nav:true,
-    navText : ["<i class='material-icons medium'>keyboard_arrow_left</i>","<i class='material-icons medium'>keyboard_arrow_right</i>"],
+    navText : ["назад","Вперед"],
+    /*navText : ["<i class='material-icons small'>arrow_back</i>","<i class='material-icons small'>arrow_forward</i>"],*/
     responsive:{
         0:{
             items:1

@@ -43,6 +43,11 @@
 
 %swing
 	@extend .swing
+
+%zoomIn
+	@extend .zoomIn
+%zoomInLeft
+	@extend .zoomInLeft
 //***********End*********//
 
 /*Разметка для колонок*/
@@ -115,9 +120,9 @@ input
   -moz-transition: height 2s ease-in
   transition: height 2s ease-in
 @mixin anim_height_fix
-	-webkit-transition: height 3s ease-in
-  -moz-transition: height 3s ease-in
-  transition: height 3s ease-in
+	-webkit-transition: height 2s cubic-bezier(0.87, 0.57, 0.68, 0.25)
+  -moz-transition: height 2s cubic-bezier(0.87, 0.57, 0.68, 0.25)
+  transition: height 2s cubic-bezier(0.87, 0.57, 0.68, 0.25)
 @mixin anim_opacity
 	-webkit-transition: opacity 1s ease-in
   -moz-transition: opacity 1s ease-in
