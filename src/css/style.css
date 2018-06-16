@@ -8015,6 +8015,9 @@ body {
 /*База*/
 html {
   font-size: 20px; }
+  @media (max-width: 1440px) {
+    html {
+      font-size: 15px; } }
   @media (max-width: 1200px) {
     html {
       font-size: 15px; } }
@@ -8321,6 +8324,10 @@ header {
      object-fit: cover;
   max-height: 400px; }
 
+.info-block .img-page.off h1 {
+  position: relative;
+  font-weight: 400; }
+
 .info-block .text.new .h1 {
   color: #ce9f51; }
 
@@ -8473,6 +8480,28 @@ footer img {
     -webkit-transition: font-size 0.5s ease-in;
       -webkit-transition--moz-transition: font-size .5s ease-in;
       -webkit-transition-transition: font-size .5s ease-in; }
+
+.img_view img {
+  border: 3px solid #ce9f51; }
+
+.project_build {
+  background-image: url("../img/bg_pj.png");
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .project_build .row {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .project_build .ele {
+    background: #1c1d22;
+    margin: .5rem auto; }
+    .project_build .ele .h1 {
+      color: #ce9f51; }
 
 /************************/
 .owl-carousel {
