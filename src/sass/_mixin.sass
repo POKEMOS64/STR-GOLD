@@ -136,6 +136,10 @@ input
   -moz-transition: color .5s ease-in
   transition: color .5s ease-in
 
+@mixin anim_font
+	-webkit-transition: font-size .5s ease-in
+  -moz-transition: font-size .5s ease-in
+  transition: font-size .5s ease-in
 @mixin anim_bg
 	-webkit-transition: background .5s ease-in
   -moz-transition: background .5s ease-in
@@ -159,11 +163,15 @@ input
 //Стандартная кнопка
 
 .btn
-	@extend .red
+	background: #ce9f51
+	//@extend .red
 	@extend .waves-effect
 	&:hover
 		opacity: .8
 		@include anim_opacity
+	&.max
+		height: 50px
+
 .center_text
 	text-align: center
 
@@ -283,6 +291,68 @@ input
 
 .clear
 	height: 2rem
+
+.data-text
+	span
+		font:
+			size: .8rem !important
+@keyframes polo
+	from,
+	30%,
+  60%,
+  to
+		animation-timing-function: linear
+	from
+		opacity: 0
+		width: 0%
+		height: 0%
+		left: -.5%
+	30%
+		opacity: 1
+		//height: 1%
+	60%
+		height: 1%
+		width: 102%
+		left: -.25%
+	to
+		height: 106%
+		width: 102%
+
+.polo
+	-webkit-animation-name: polo
+	animation-name: polo
+
+.fix-anima
+	position: relative
+	&::after
+		+bg(bg_sub)
+		background-size: cover
+		border-radius: 14px
+		opacity: 0
+		content: ''
+		display: block
+		position: absolute
+		width: 0%
+		max-width: 102%
+		height: 0%
+		max-height: 106%
+		border: 6px solid #ce9f51
+		//background: #fff
+		bottom: -3%
+		left: -1%
+		right: 0
+		margin: 0 auto
+	&:hover
+		&::after
+			width: 102%
+			height: 106%
+			left: -1%
+			opacity: 1
+			-webkit-animation-duration: .5s
+		  animation-duration: .5s
+		  -webkit-animation-fill-mode: both
+		  animation-fill-mode: both
+			@extend .polo
 //
 .fix
 	&::before
