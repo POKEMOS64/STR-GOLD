@@ -22,6 +22,8 @@
 %slideInUp
 	@extend .slideInUp
 
+%bounceInLeft
+	@extend .bounceInLeft
 %bounceInUp
 	@extend .bounceInUp
 %bounceOutDown
@@ -296,31 +298,6 @@ input
 	span
 		font:
 			size: .8rem !important
-@keyframes polo
-	from,
-	30%,
-  60%,
-  to
-		animation-timing-function: linear
-	from
-		opacity: 0
-		width: 0%
-		height: 0%
-		left: -.5%
-	30%
-		opacity: 1
-		//height: 1%
-	60%
-		height: 1%
-		width: 102%
-		left: -.25%
-	to
-		height: 106%
-		width: 102%
-
-.polo
-	-webkit-animation-name: polo
-	animation-name: polo
 
 .fix-anima
 	position: relative

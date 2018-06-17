@@ -697,4 +697,101 @@
 .zoomInLeft
   -webkit-animation-name: zoomInLeft
   animation-name: zoomInLeft
+
+//bounceInLeft
+@-webkit-keyframes bounceInLeft
+  from,
+  60%,
+  75%,
+  90%,
+  to
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(-3000px, 0, 0)
+    transform: translate3d(-3000px, 0, 0)
+
+  60%
+    opacity: 1
+    -webkit-transform: translate3d(25px, 0, 0)
+    transform: translate3d(25px, 0, 0)
+
+  75%
+    -webkit-transform: translate3d(-10px, 0, 0)
+    transform: translate3d(-10px, 0, 0)
+
+  90%
+    -webkit-transform: translate3d(5px, 0, 0)
+    transform: translate3d(5px, 0, 0)
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+@keyframes bounceInLeft
+  from,
+  60%,
+  75%,
+  90%,
+  to
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+
+  0%
+    opacity: 0
+    -webkit-transform: translate3d(-3000px, 0, 0)
+    transform: translate3d(-3000px, 0, 0)
+
+  60%
+    opacity: 1
+    -webkit-transform: translate3d(25px, 0, 0)
+    transform: translate3d(25px, 0, 0)
+
+  75%
+    -webkit-transform: translate3d(-10px, 0, 0)
+    transform: translate3d(-10px, 0, 0)
+
+  90%
+    -webkit-transform: translate3d(5px, 0, 0)
+    transform: translate3d(5px, 0, 0)
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+.bounceInLeft
+  -webkit-animation-name: bounceInLeft
+  animation-name: bounceInLeft
+//
+@keyframes polo
+	from,
+	30%,
+  60%,
+  to
+		animation-timing-function: linear
+	from
+		opacity: 0
+		width: 0%
+		height: 0%
+		left: -.5%
+	30%
+		opacity: 1
+		//height: 1%
+	60%
+		height: 1%
+		width: 102%
+		left: -.25%
+	to
+		height: 106%
+		width: 102%
+
+.polo
+	-webkit-animation-name: polo
+	animation-name: polo
+
+
 //Animation

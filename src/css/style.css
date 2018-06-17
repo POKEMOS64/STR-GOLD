@@ -7113,13 +7113,13 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     -webkit-animation-duration--webkit-animation-fill-mode: both;
     -webkit-animation-duration-animation-fill-mode: both; }
 
-.animated, .right_anim_panel, .start_menu, .start_menu .btn, .start_menu .btn-large, .start_menu .btn-small, .modal_click button, .slider-widget .owl-item.active h2 {
+.animated, .right_anim_panel, .start_menu, .start_menu .btn, .start_menu .btn-large, .start_menu .btn-small, .modal_click button, .slider-widget .owl-item.active h2, .price_list .nvi.no-ww, .price_list .nvi.ww, .price_list .nvi__name, .price_list .nvi__name i, .price_list .nvi_list.active, .price_list .price_box.active {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animated.infinite, .infinite.right_anim_panel, .infinite.start_menu, .start_menu .infinite.btn, .start_menu .infinite.btn-large, .start_menu .infinite.btn-small, .modal_click button.infinite, .slider-widget .owl-item.active h2.infinite {
+.animated.infinite, .infinite.right_anim_panel, .infinite.start_menu, .start_menu .infinite.btn, .start_menu .infinite.btn-large, .start_menu .infinite.btn-small, .modal_click button.infinite, .slider-widget .owl-item.active h2.infinite, .price_list .infinite.nvi.no-ww, .price_list .infinite.nvi.ww, .price_list .infinite.nvi__name, .price_list .nvi__name i.infinite, .price_list .infinite.nvi_list.active, .price_list .infinite.price_box.active {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
@@ -7175,7 +7175,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
-.bounceInLeft {
+.bounceInLeft, .price_list .nvi.no-ww, .price_list .nvi.ww, .price_list .price_box.active {
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft; }
 
@@ -7573,7 +7573,7 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     -webkit-transform: perspective(400px);
     transform: perspective(400px); } }
 
-.flipInX, .slider-widget .owl-item.active p {
+.flipInX, .slider-widget .owl-item.active p, .price_list .nvi__name i, .price_list .nvi_list.active {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
@@ -7697,6 +7697,110 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 .zoomInLeft, .slider-widget .owl-item.active h2 {
   -webkit-animation-name: zoomInLeft;
   animation-name: zoomInLeft; }
+
+@-webkit-keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0); }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0); }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0); }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.bounceInLeft, .price_list .nvi.no-ww, .price_list .nvi.ww, .price_list .price_box.active {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft; }
+
+@-webkit-keyframes polo {
+  from,
+  30% {
+    60%,
+    to { }
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+  from {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    left: -.5%; }
+  30% {
+    opacity: 1; }
+  60% {
+    height: 1%;
+    width: 102%;
+    left: -.25%; }
+  to {
+    height: 106%;
+    width: 102%; } }
+
+@keyframes polo {
+  from,
+  30% {
+    60%,
+    to { }
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear; }
+  from {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    left: -.5%; }
+  30% {
+    opacity: 1; }
+  60% {
+    height: 1%;
+    width: 102%;
+    left: -.25%; }
+  to {
+    height: 106%;
+    width: 102%; } }
+
+.polo, .fix-anima:hover::after {
+  -webkit-animation-name: polo;
+  animation-name: polo; }
 
 /*Разметка для колонок*/
 .color_bag {
@@ -7920,54 +8024,6 @@ header .navi {
 .data-text span {
   font-size: .8rem !important; }
 
-@-webkit-keyframes polo {
-  from,
-  30% {
-    60%,
-    to { }
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear; }
-  from {
-    opacity: 0;
-    width: 0%;
-    height: 0%;
-    left: -.5%; }
-  30% {
-    opacity: 1; }
-  60% {
-    height: 1%;
-    width: 102%;
-    left: -.25%; }
-  to {
-    height: 106%;
-    width: 102%; } }
-
-@keyframes polo {
-  from,
-  30% {
-    60%,
-    to { }
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear; }
-  from {
-    opacity: 0;
-    width: 0%;
-    height: 0%;
-    left: -.5%; }
-  30% {
-    opacity: 1; }
-  60% {
-    height: 1%;
-    width: 102%;
-    left: -.25%; }
-  to {
-    height: 106%;
-    width: 102%; } }
-
-.polo, .fix-anima:hover::after {
-  -webkit-animation-name: polo;
-  animation-name: polo; }
-
 .fix-anima {
   position: relative; }
   .fix-anima::after {
@@ -8144,6 +8200,60 @@ p {
 
 .bread {
   padding-left: 30px; }
+
+.sidenav-trigger {
+  position: fixed;
+  z-index: 99;
+  background: #ffeb3b;
+  padding: 1rem 3.3rem;
+  top: 0;
+  display: none; }
+
+.sidenav li:first-child {
+  background: #1c1d22;
+  background-image: url("../img/bg_mobi.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: right 0;
+  padding: 2rem 0; }
+  .sidenav li:first-child a {
+    color: #fff; }
+    .sidenav li:first-child a.linki {
+      margin: 0; }
+    .sidenav li:first-child a.logo-brand {
+      color: #fff;
+      font-size: 1.33rem;
+      font-weight: 900; }
+
+.sidenav li.sidenav-close {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .sidenav li.sidenav-close i {
+    float: right; }
+
+.deploy .btn, .deploy .btn-large, .deploy .btn-small {
+  margin: 1rem auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*База*/
 /************************/
@@ -8503,6 +8613,91 @@ footer img {
     .project_build .ele .h1 {
       color: #ce9f51; }
 
+.price_list {
+  overflow: hidden; }
+  .price_list .nvi {
+    position: relative; }
+    @media (max-width: 960px) {
+      .price_list .nvi {
+        background: #1c1d22;
+        position: fixed;
+        -webkit-border-radius: 0 0 14px 0;
+                border-radius: 0 0 14px 0;
+        top: 20%; }
+        .price_list .nvi.no-ww {
+          width: 0%; }
+        .price_list .nvi.ww {
+          width: 91.66667%;
+          z-index: 9; } }
+    .price_list .nvi li {
+      width: 100%;
+      margin: .1rem 0; }
+    .price_list .nvi__name {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .price_list .nvi__name i {
+        display: none; }
+      @media (max-width: 960px) {
+        .price_list .nvi__name {
+          background: #1c1d22;
+          padding: .5rem;
+          position: absolute;
+          -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+                  transform: rotate(90deg);
+          right: -5.8rem;
+          top: 3.8rem;
+          -webkit-border-radius: 14px 14px 0 0;
+                  border-radius: 14px 14px 0 0; }
+          .price_list .nvi__name i.no-active {
+            display: none !important; }
+          .price_list .nvi__name i.active {
+            display: block; } }
+      .price_list .nvi__name h3 {
+        margin: 0; }
+    @media (max-width: 960px) {
+      .price_list .nvi_list {
+        display: none; } }
+    .price_list .nvi_list.active {
+      display: block; }
+    .price_list .nvi_list li.active {
+      background: #999; }
+  .price_list .price_box {
+    display: none; }
+    .price_list .price_box.active {
+      display: block; }
+  .price_list .other_remont_price_viewer {
+    font-size: .8rem; }
+    .price_list .other_remont_price_viewer td:hover {
+      background: #999;
+      color: #fff;
+      -webkit-transition: color 0.5s ease-in;
+        -webkit-transition--moz-transition: color .5s ease-in;
+        -webkit-transition-transition: color .5s ease-in; }
+
+.contact .ele {
+  margin: 1rem 0; }
+
+.contact a {
+  color: #ce9f51;
+  text-align: right; }
+
+.contact p {
+  margin: 0;
+  border-bottom: 1px solid #ce9f51; }
+
 /************************/
 .owl-carousel {
   display: none;
@@ -8596,7 +8791,7 @@ footer img {
 
 /*
  *  Owl Carousel - Animate Plugin */
-.owl-carousel .animated, .owl-carousel .right_anim_panel, .owl-carousel .start_menu, .owl-carousel .start_menu .btn, .start_menu .owl-carousel .btn, .owl-carousel .start_menu .btn-large, .start_menu .owl-carousel .btn-large, .owl-carousel .start_menu .btn-small, .start_menu .owl-carousel .btn-small, .owl-carousel .modal_click button, .modal_click .owl-carousel button, .owl-carousel .slider-widget .owl-item.active h2, .slider-widget .owl-item.active .owl-carousel h2 {
+.owl-carousel .animated, .owl-carousel .right_anim_panel, .owl-carousel .start_menu, .owl-carousel .start_menu .btn, .start_menu .owl-carousel .btn, .owl-carousel .start_menu .btn-large, .start_menu .owl-carousel .btn-large, .owl-carousel .start_menu .btn-small, .start_menu .owl-carousel .btn-small, .owl-carousel .modal_click button, .modal_click .owl-carousel button, .owl-carousel .slider-widget .owl-item.active h2, .slider-widget .owl-item.active .owl-carousel h2, .owl-carousel .price_list .nvi.no-ww, .price_list .owl-carousel .nvi.no-ww, .owl-carousel .price_list .nvi.ww, .price_list .owl-carousel .nvi.ww, .owl-carousel .price_list .nvi__name, .price_list .owl-carousel .nvi__name, .owl-carousel .price_list .nvi__name i, .price_list .nvi__name .owl-carousel i, .owl-carousel .price_list .nvi_list.active, .price_list .owl-carousel .nvi_list.active, .owl-carousel .price_list .price_box.active, .price_list .owl-carousel .price_box.active {
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
   -webkit-animation-fill-mode: both;

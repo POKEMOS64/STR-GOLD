@@ -126,5 +126,48 @@ p
 			color: rgba(206, 159, 81, 1)
 .bread
 	padding-left: 30px
+.sidenav-trigger
+	position: fixed
+	z-index: 99
+	background: #ffeb3b
+	padding: 1rem 3.3rem
+	top: 0
+	display: none
+.sidenav
+	li
+		&:first-child
+			background: #1c1d22
+			+bg(bg_mobi)
+			background-size: cover
+			background-position: right 0
+			padding: 2rem 0
+			a
+				color: #fff
+				&.linki
+					margin: 0
+				&.logo-brand
+					color: #fff
+					font:
+						size: 1.33rem
+						weight: 900
+		&.sidenav-close
+			width: 100%
+			display: -webkit-flex
+			display: -ms-flex
+			display: flex
+			align-items: center
+			i
+				float: right
+
+
+.deploy
+	.btn
+		margin: 1rem auto
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+		justify-content: center
+
 //#b0bec5 blue-grey lighten-3
 //#b71c1c red darken-4

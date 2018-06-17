@@ -1,7 +1,7 @@
 $(function(){
   if($(window).width() < 960) {
-    $('.hide-on-med-and-down').removeClass("right hide-on-med-and-down");
-    $('.sidenav-close').css('display','block');
+    $('.header').css('display','none');
+    $('.sidenav-trigger').css('display','block');
 
   } else {
     // change functionality for larger screens
@@ -56,7 +56,23 @@ $(document).ready(function(){
 		});
 	});
 
+$(function(){
+  var a = $("i.nvi_i");
+  var b = $("i.exit_click");
 
+  $(".nvi_i").click(function(){
+    $(".nvi_list").toggleClass("active");
+    $(".nvi").toggleClass("no-ww ww");
+    $(".nvi_i").toggleClass("active no-active");
+    $(".exit_click").toggleClass("no-active active");
+  });
+  $(".exit_click").click(function(){
+    $(".nvi_list").toggleClass("active");
+    $(".nvi").toggleClass("no-ww ww");
+    $(".exit_click").toggleClass("active no-active");
+    $(".nvi_i").toggleClass("no-active active ");
+  });
+});
 //Выпадающее меню
 $(function(){
   $(".text img").addClass("animImg")
@@ -76,7 +92,14 @@ $(function(){
   });
 });
 
-
+(function($) {
+$(function(){
+  $('ul.nvi_list').on('click', 'li:not(.active)', function(){
+    $(this).addClass('active').siblings().removeClass('active')
+    .closest('div.price_list').find('div.price_box').removeClass('active').eq($(this).index()).addClass('active');
+  });
+});
+})(jQuery);
 $(document).ready(function(){
   var resuiltC = function(){
     var varOn = $('input:checked');
